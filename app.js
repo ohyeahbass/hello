@@ -5,9 +5,7 @@ var braintree = require("braintree");
 app.use(express.static(__dirname + '/public'));
 var gateway = braintree.connect({
   environment:braintree.Environment.Sandbox,
-  merchantId: "tjx9zq5ydqmhxrv8",
-  publicKey: "49pbb6r68jbq2fvc",
-  privateKey: "2961f10337a7a32788815f6299eff56d"
+
 })
 
 //Passport
