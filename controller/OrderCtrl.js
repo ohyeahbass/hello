@@ -1,9 +1,7 @@
 var braintree = require("braintree");
 var gateway = braintree.connect({
   environment:braintree.Environment.Sandbox,
-  merchantId: "tjx9zq5ydqmhxrv8",
-  publicKey: "49pbb6r68jbq2fvc",
-  privateKey: "2961f10337a7a32788815f6299eff56d"
+
 })
 
 var Order = require('../models/OrderModel');
