@@ -1,0 +1,88 @@
+<div>
+<button ng-click="getOrdersOwedOn()">orders owed on</button>
+<button ng-click="getAllOrders()">all orders</button>
+<div ng-repeat="order in orders track by $index" id="admin-container">
+    <div class="order">
+        <a role="button" data-toggle="collapse" target="_self" href="#collapseOrderInfo{{$index}}" aria-expanded="false" aria-controls="collapseOrderInfo{{$index}}">
+            <span> Email: {{order.userEmail}}</span>
+            <span>Order Date: {{ order.time | date : format : "short"}}</span>
+        </a>
+        <div class="collapse" id="collapseOrderInfo{{$index}}">
+            <div class="order-info-body">
+                <div class="order_images">
+                    <div ng-show="{{order.frontOfCard}}">
+                        <img src="{{order.frontOfCard}}" alt="">
+                        <a  href="{{order.frontOfCard}}" download="front.png">download</a>
+                    </div>
+                    <div ng-show="{{order.backOfCard}}">
+                        <img src="{{order.backOfCard}}" alt="">
+                        <a  href="{{order.backOfCard}}" download="back.png">download</a>
+                    </div>
+                    <div ng-show="{{order.banner}}">
+                        <img src="{{order.banner}}" alt="">
+                        <a href="{{order.baner}}" download="banner.png">download</a>
+                    </div>
+                </div>
+                <div class="admin_cust_order_info">
+                    <p>qty:{{order.quantity}}</p>
+                    <p>finish:{{order.finish}}</p>
+                    <p>email: {{order.userEmail}}</p>
+                    <p>phone updates: {{order.phoneUpdates}}</p>
+                    <p>user: {{order.userPhone}}</p>
+                    <p>order id:{{order._id}}</p>
+                    <p>Amount Paid: {{order.amountPaid}}</p>
+                    <p>Total Price:{{order.totalPrice}} </p>
+                    <p>Total Owned:{{order.totalPrice - order.amountPaid}} </p>
+                </div>
+                <div class="admin_admin_order_info">
+                    <span>est. to fulfill:<input ng-model="order.estTimeToCompltion"></span>
+                    <span>order placed:<input ng-model="order.sentOrder"></span>
+                    <span>ready to pickup:<input ng-model="order.readyToPickUp"><span>
+                    <select placeholder="order Fullfilled"  ng-model="managementOrder.phoneUpdates">
+                        <option value="true">Fullfiled</option>
+                        <option value="false">Pending</option>
+                    </select>
+                    <button ng-click="updateOrder(order._id, order)">update order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 200px;">
+    New Order
+    <input placeholder="Email"type="text" ng-model="managementOrder.user_id">
+    <input placeholder="Phone"type="text" ng-model="managementOrder.userPhone">
+    <input placeholder="Total Price"  ng-model="managementOrder.totalPrice">
+    <input placeholder="Amount Paid"  ng-model="managementOrder.amountPaid">
+    <select placeholder="Phone Updates"  ng-model="managementOrder.phoneUpdates">
+        <option value="true">Recive Phone updates</option>
+        <option value="false">Recieve Email Updates</option>
+    </select>
+
+    <input placeholder="Desc"type="text" ng-model="managementOrder.desc">
+    <button ng-click="addManagementOrder()"></button>
+</div>
+<div>
+    <h3>Store Info</h3>
+    <div id="admin_store_info">
+        <input type="text"placeholder="Business Card 1 Price" ng-model="storeInfo.businessCardPrices.pq1.price">
+        <input type="text"placeholder="Business Card 1 Quantity" ng-model="storeInfo.businessCardPrices.pq1.qty">
+        <input type="text"placeholder="Business Card 2 Price" ng-model="storeInfo.businessCardPrices.pq2.price">
+        <input type="text"placeholder="Business Card 2 Quantity" ng-model="storeInfo.businessCardPrices.pq2.qty">
+        <input type="text"placeholder="Business Card 3 Price" ng-model="storeInfo.businessCardPrices.pq3.price">
+        <input type="text"placeholder="Business Card 3 Quantity" ng-model="storeInfo.businessCardPrices.pq3.qty">
+        <input type="text"placeholder="Business Card 4 Price" ng-model="storeInfo.businessCardPrices.pq4.price">
+        <input type="text"placeholder="Business Card 4 Quantity" ng-model="storeInfo.businessCardPrices.pq4.qty">
+        <input type="text"placeholder="Business Card 5 Price" ng-model="storeInfo.businessCardPrices.pq5.price">
+        <input type="text"placeholder="Business Card 5 Quantity" ng-model="storeInfo.businessCardPrices.pq5.qty">
+        <input type="text"placeholder="Business Card 6 Price" ng-model="storeInfo.businessCardPrices.pq6.price">
+        <input type="text"placeholder="Business Card 6 Quantity" ng-model="storeInfo.businessCardPrices.pq6.qty">
+        <input type="text"placeholder="Banner Price" ng-model="storeInfo.bannerPrice">
+        <input type="text"placeholder="Contact Number" ng-model="storeInfo.contactNumber">
+        <input type="text"placeholder="contact Email" ng-model="storeInfo.contactEmail">
+        <input type="text"placeholder="PayPal Payment Number" ng-model="storeInfo.ppn">
+        <input type="text"placeholder="Physical Address" ng-model="storeInfo.physicalAddress">
+        <button ng-click="addStoreInfo()">add store info</button>
+    </div>
+</div>
+</div>

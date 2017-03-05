@@ -1,0 +1,409 @@
+.carousel-container {
+  position: relative;
+  top: -80px;
+  width: 100vw;
+}
+nav {
+  position: relative;
+  z-index: 5;
+}
+#cardOne {
+  display: flex;
+  width: 717px;
+  margin: 30px auto 10px;
+}
+#cardOne .front-of-card {
+  position: relative;
+  margin-right: 10px;
+}
+#cardOne .front-of-card img {
+  width: 348px;
+}
+#cardOne .front-of-card #card-name {
+  position: absolute;
+  top: 27px;
+  left: 36px;
+  font-size: 12px;
+  text-transform: capitalize;
+  width: 109px;
+  color: #FFFF00;
+  text-align: center;
+}
+#cardOne .front-of-card #card-jobTitle {
+  position: absolute;
+  top: 42px;
+  left: 45px;
+  font-size: 10px;
+  text-transform: capitalize;
+  width: 112px;
+  color: #FFFF00;
+  text-align: center;
+}
+#cardOne .front-of-card #card-phone {
+  position: absolute;
+  top: 88px;
+  left: 60px;
+  font-size: 11px;
+  text-transform: uppercase;
+  width: 116px;
+  text-align: left;
+  color: black;
+}
+#cardOne .front-of-card #card-website {
+  position: absolute;
+  top: 113px;
+  left: 62px;
+  font-size: 10px;
+  /* text-transform: uppercase; */
+  width: 116px;
+  text-align: left;
+  color: black;
+}
+#cardOne .front-of-card #card-email {
+  position: absolute;
+  top: 138px;
+  left: 61px;
+  font-size: 10px;
+  /* text-transform: uppercase; */
+  width: 116px;
+  text-align: left;
+  color: black;
+}
+#cardOne .front-of-card #card-address {
+  position: absolute;
+  top: 165px;
+  left: 60px;
+  font-size: 9px;
+  text-transform: capitalize;
+  width: 116px;
+  text-align: left;
+  color: black;
+}
+#cardOne .back-of-card {
+  position: relative;
+  margin-left: 10px;
+}
+#cardOne .back-of-card img {
+  width: 348px;
+}
+#cardOne .back-of-card #card-corpName {
+  position: absolute;
+  top: 72px;
+  left: 79px;
+  font-size: 20px;
+  text-transform: uppercase;
+  width: 196px;
+  text-align: center;
+  color: #FFFF00;
+}
+#cardOne .back-of-card #card-corpSub {
+  position: absolute;
+  top: 101px;
+  left: 90px;
+  font-size: 14px;
+  text-transform: uppercase;
+  width: 173px;
+  text-align: center;
+  color: #FFFF00;
+}
+#showcardStepTwo p {
+  text-align: center;
+}
+#showcardStepTwo button {
+  margin-left: 50%;
+  transform: translate(-50%);
+}
+#card-info .input-containers input {
+  height: 20px;
+  margin-bottom: 0;
+}
+#bottom_controls {
+  display: flex;
+  width: 100vw;
+  position: relative;
+  top: -104px;
+}
+#banner-info {
+  width: 30%;
+}
+#step_three_cards {
+  width: 30%;
+}
+#step_three_banner {
+  width: 30%;
+}
+#banner_display {
+  width: 700px;
+  height: 263px;
+  border: red solid 3px;
+}
+#banner_display .banner-display p {
+  text-align: center;
+}
+#banner_display .banner-display button {
+  margin: 10px auto;
+  display: block;
+}
+input[type=range] {
+  display: inline-block;
+  width: 28%;
+}
+#card-info .input-containers input {
+  color: red;
+  width: 154px;
+}
+#banner-text-one,
+#banner-text-two,
+#banner-text-three,
+#banner-text-four {
+  font-weight: 900;
+}
+#admin-container .order {
+  display: flex;
+  flex-direction: column;
+}
+#admin-container .order .order-info-body {
+  display: flex;
+}
+#admin-container .order .order_images {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+}
+#admin-container .order .order_images img {
+  width: 200px;
+  height: 126px;
+}
+#admin-container .order .admin_cust_order_info {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+#admin-container .order .admin_admin_order_info {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+nav {
+  height: 85px;
+  background: #333;
+  margin-top: 25px;
+}
+#homepage_container #home_jumbo {
+  position: relative;
+}
+#homepage_container #home_jumbo img {
+  width: 100%;
+}
+#homepage_container #home_jumbo h1 {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%);
+  color: #fff;
+  text-shadow: 1px 1px 5px #333;
+  text-transform: uppercase;
+  width: 650px;
+}
+#homepage_container #home_jumbo h4 {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  transform: translate(-50%);
+  color: #fff;
+  text-shadow: 1px 1px 5px #333;
+  top: 50%;
+  text-align: center;
+}
+#homepage_container #lognreg-buttons {
+  background: #62b3b6;
+  margin-top: -30px;
+  padding-top: 30px;
+}
+#homepage_container #lognreg-buttons h3 {
+  font-size: 50px;
+  text-align: center;
+}
+#homepage_container #lognreg-buttons #log_y_reg {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+#homepage_container #lognreg-buttons #log_y_reg a {
+  font-size: 30px;
+  padding: 1px 62px;
+  background: #fff;
+  color: #333;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+#login_container {
+  width: 80%;
+  margin-left: 10%;
+  display: flex;
+  margin-top: 20px;
+}
+#login_container h1 {
+  font-size: 40px;
+  width: 30%;
+}
+#login_container #actual_login {
+  width: 33%;
+  margin-top: 20px;
+}
+#login_container #actual_login #reg_login {
+  position: relative;
+}
+#login_container #actual_login #reg_login input,
+#login_container #actual_login #reg_login button {
+  position: absolute;
+  right: 0;
+}
+#login_container #actual_login #reg_login button {
+  margin-top: 30px;
+}
+#login_container #actual_login #fb_login {
+  margin-top: 90px;
+  display: inline-block;
+}
+#login_container #actual_login > a {
+  margin-left: 91px;
+}
+#start_sections_steps {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  position: fixed;
+  bottom: 0;
+}
+#start_sections_steps .steps_sections {
+  width: 30%;
+}
+#start_sections_steps .steps_sections .step_and_line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#start_sections_steps .steps_sections .step_and_line h5 {
+  color: #ffffff;
+}
+#start_sections_steps .steps_sections .step_and_line span {
+  width: 84%;
+  height: 8px;
+  background: red;
+}
+#start_sections_steps .steps_sections span {
+  color: #fff;
+  width: 10%;
+}
+#start_sections_steps .steps_sections .line_and_steps {
+  width: 89%;
+  height: 10px;
+  background: red;
+}
+#start_sections_steps #step_section_one #chooser_container {
+  display: flex;
+  flex-direction: column;
+}
+#start_sections_steps #step_section_one .step-one-sections {
+  display: flex;
+  justify-content: space-between;
+}
+#start_sections_steps #step_section_one .step-one-sections div {
+  width: 65%;
+}
+#start_sections_steps #step_section_one .step-one-sections img {
+  width: 30%;
+  height: 5vw;
+}
+#start_sections_steps #step_section_one .step-one-sections h3 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 19px;
+}
+#start_sections_steps #step_section_one .step-one-sections p {
+  color: #fff;
+  font-size: 11px;
+}
+#start_sections_steps #step_section_one .step-one-sections button {
+  color: #FFF;
+  background: red;
+  padding: 4px 8px;
+  border: none;
+}
+#start_sections_steps #step_section_two #cardInputs .input-containers {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#start_sections_steps #step_section_two #cardInputs .input-containers input {
+  width: 64%;
+}
+#start_sections_steps #step_section_three #step_three_img_paragraph {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+#start_sections_steps #step_section_three #step_three_img_paragraph #pandb {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+#start_sections_steps #step_section_three #step_three_img_paragraph img {
+  width: 194px;
+  height: 113px;
+}
+#start_sections_steps #step_section_three #step_three_img_paragraph h4 {
+  color: #fff;
+  text-transform: uppercase;
+}
+#start_sections_steps #step_section_three #step_three_img_paragraph p {
+  color: #FFF;
+  font-size: 11px;
+}
+#start_sections_steps #step_section_three #selections_cards {
+  width: 100%;
+}
+#start_sections_steps #step_section_three #selections_cards div {
+  display: flex;
+  justify-content: space-between;
+}
+#start_sections_steps #step_section_three #selections_cards div select {
+  width: 65%;
+}
+#start_sections_steps #step_section_three #selections_cards div span {
+  color: #FFF;
+  width: 20%;
+}
+#cart_container .cart-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#cart_container .cart-item .cart-image-container {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+}
+#cart_container .cart-item .cart-image-container img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+#cart_container .cart-item .cart-desc {
+  width: 60%;
+}
+#cart_container .cart-item .cart-desc h3 {
+  font-size: 35px;
+  margin-top: 0;
+}
+#cart_container .cart-item .cart-desc p {
+  font-size: 20px;
+}
+#cart_container .cart-item .cart_price p {
+  font-size: 20px;
+  margin-top: 7px;
+}

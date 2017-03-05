@@ -1,0 +1,37 @@
+<div id="cart_container">
+    <div class="cart-item">
+        <div class="cart-image-container">
+            <img src='{{currentCartItems.frontOfCard}}'/>
+            <img src='{{currentCartItems.backOfCard}}'/>
+            <img src='{{currentCartItems.banner}}'/>
+        </div>
+        <div class="cart-desc">
+            <h3 ng-if="currentCartItems.frontOfCard"> Business Cards</h3>
+            <h3 ng-if="currentCartItems.banner"> Banner</h3>
+            <p><strong>Qty:</strong> {{currentCartItems.quantity}}</p>
+            <p><strong>Finish:</strong> {{currentCartItems.finish}}</p>
+            <p><strong>Price:</strong> ${{currentCartItems.price}}.00</p>
+        </div>
+    </div>
+    <div id="cartSummary">
+        <h4>SUMMARY</h4>
+        <div><h6>SUBTOTAL</h6><h6>${{currentCartItems.price}}.00</h6></div>
+        <h6>TAX {{StoreInfo}}</h6>
+        <h5>Total</h5>
+        
+    </div>
+<button ng-click='getKey()'>get key</button>
+<form id="checkout" method="post" action="/checkout">
+  <div id="payment-form"></div>
+  <input type="submit" value="Pay $10">
+</form>
+
+<script src="https://js.braintreegateway.com/js/braintree-2.31.0.min.js"></script>
+<script>
+// We generated a client token for you so you can test out this code
+// immediately. In a production-ready integration, you will need to
+// generate a client token on your server (see section below).
+
+
+</script>
+</div>

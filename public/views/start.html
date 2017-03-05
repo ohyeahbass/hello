@@ -1,0 +1,184 @@
+<section>
+    <div ng-show="showcardStepTwo" id="showcardStepTwo">
+        <div class="carousel-item cardOne" href="#one!">
+            <div id=cardOne>
+                <div class="front-of-card" ng-model="frontOfCard" id="frontOfCard">
+                    <img src="/img/front_of_card.png">
+                    <span id="card-name">{{cardInfo.name}}</span>
+                    <span id="card-jobTitle">{{cardInfo.jobTitle}}</span>
+                    <span id="card-phone">{{cardInfo.phone}}</span>
+                    <span id="card-website">{{cardInfo.web}}</span>
+                    <span id="card-email">{{cardInfo.email}}</span>
+                    <span id="card-address">{{cardInfo.address}}</span>
+                </div>
+                <div class="back-of-card" ng-model="backOfCard" id="backOfCard">
+                    <img src="/img/back_of_card.png" alt="">
+                    <span id="card-corpName">{{cardInfo.corpName}}</span>
+                    <span id="card-corpSub">{{cardInfo.corpSub}}</span>
+                </div>
+            </div> 
+            <p>once you chose the card you like save selection and continue to step 3.</p>
+            <button ng-click="saveToCanvas()">Save Card</button><!--1050X600  -->
+        </div>
+    </div>
+    <div ng-show="showBannerStepTwo" id="showBannerStepTwo">
+        <div class="" href="">
+            <div>
+                <div class="banner-display" ng-model="frontOfBanner" id="banner_display">
+                    <span id="banner-text-one" ng-style="{'font-family': textOne.font, 'color': textOne.color, 'font-size': textOne.size + 'px'}">{{bannerInfo.textOne}}</span>
+                    <span id="banner-text-two" ng-style="{'font-family': textTwo.font, 'color': textTwo.color,'font-size': textTwo.size + 'px'}">{{bannerInfo.textTwo}}</span>
+                    <span id="banner-text-three" ng-style="{'font-family': textThree.font, 'color': textThree.color, 'font-size': textThree.size + 'px'}">{{bannerInfo.textThree}}</span>
+                    <span id="banner-text-four" ng-style="{'font-family': textFour.font, 'color': textFour.color, 'font-size': textFour.size + 'px'}">{{bannerInfo.textFour}}</span>
+                </div>
+            </div> 
+            <p>Drag and Drop text, adjust color, size and font; then save.</p>
+            <button ng-click="saveToCanvasBanner()">Save Banner</button><!--1050X600  -->
+        </div>
+    </div>
+</section>
+<div id="start_sections_steps">
+    <section class="steps_sections" id="step_section_one">
+        <div class="step_and_line">
+            <h5>STEP 1</h5>
+            <span id="line_in_steps"></span>
+        </div>
+        <div id="chooser_container">
+            <div class='step-one-sections'>
+                <img src="/img/front_of_card.png" alt="">
+                <div>
+                    <h3>SMALL FORMAT</h3>
+                    <p>Lotus root brussels sprout turnip greens beet greens mustard okra earthnut pea fennel radicchio kohlrabi soko </p>
+                    <button ng-click="startCard()">BUILD YOUR OWN</button>
+                </div>
+            </div>
+            <div class='step-one-sections'>
+                <img src="/img/front_of_card.png" alt="">
+                <div>
+                    <h3>LARGE FORMAT</h3>
+                    <p>Lotus root brussels sprout turnip greens beet greens mustard okra earthnut pea fennel radicchio kohlrabi soko </p>
+                    <button ng-click="startBanner()">BUILD YOUR OWN</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="steps_sections" id="step_section_two">
+        <div>
+            <div id="card-info" ng-show="showcardStepTwo">
+                <div class="step_and_line">
+                    <h5>STEP 2</h5>
+                    <span class="line_in_steps"></span>
+                </div>
+                <div><i class="material-icons"></i>Input Your Information</div>
+                <div id="cardInputs">
+                    <span class="input-containers">Name: <input placeholder="name"type="text" ng-model="cardInfo.name"></span>
+                    <span class="input-containers">Job Title:<input placeholder="job" type="text" ng-model="cardInfo.jobTitle"></span>
+                    <span class="input-containers">Phone:<input placeholder="phone" type="text" ng-model="cardInfo.phone"></span>
+                    <span class="input-containers">Website:<input placeholder="website" type="text" ng-model="cardInfo.web"></span>
+                    <span class="input-containers">Email:<input placeholder="email" type="text" ng-model="cardInfo.email"></span>
+                    <span class="input-containers">Addres:<input placeholder="address" type="text" ng-model="cardInfo.address"></span>
+                    <span class="input-containers">Business Title:<input placeholder="corpName" type="text" ng-model="cardInfo.corpName"></span>
+                    <span class="input-containers">Business Subtitle:<input placeholder="corpSub" type="text" ng-model="cardInfo.corpSub"></span>
+                </div>
+                <p>once you chose the card you like save selection and continue to step 3.</p>
+            </div>
+            <div id="card-info" ng-show="showBannerStepTwo">
+                <div class="step_and_line">
+                    <h5>STEP 2</h5>
+                    <span class="line_in_steps"></span>
+                </div>
+                <div><i class="material-icons"></i>Input Your Information</div>
+                <div id="">
+                    <span class="input-containers">Text 1: <input placeholder="text 1" type="text" ng-model="bannerInfo.textOne"></span>
+                    <span>Font:</span> <select ng-options="font for font in fonts" ng-model="textOne.font"></select>
+                    <span>Text Color:</span><input color-picker color-picker-model="textOne.color" ng-style="{background:var}"/>
+                    <span>Text Size:</span> <input min="20" max="100" ng-model="textOne.size" type="range">
+                    <span class="input-containers">Text 2 :<input placeholder="text 2" type="text" ng-model="bannerInfo.textTwo"></span>
+                    <span>Font:</span> <select ng-options="font for font in fonts" ng-model="textTwo.font"></select>
+                   <span>Text Color:</span> <input color-picker color-picker-model="textTwo.color" ng-style="{background:var}"/>
+                    <span>Text Size:</span> <input min="20" max="100" ng-model="textTwo.size" type="range">
+                    <span class="input-containers">Text 3:<input placeholder="text 3" type="text" ng-model="bannerInfo.textThree"></span>
+                    <span>Font:</span> <select ng-options="font for font in fonts" ng-model="textThree.font"></select>
+                    <span>Text Color:</span><input color-picker color-picker-model="textThree.color" ng-style="{background:var}"/>
+                    <span>Text Size:</span> <input min="20" max="100" ng-model="textThree.size" type="range">
+                    <span class="input-containers">Text 4:<input placeholder="text 4" type="text" ng-model="bannerInfo.textFour"></span>
+                    <span>Font:</span> <select ng-options="font for font in fonts" ng-model="textFour.font"></select>
+                    <span>Text Color:</span><input color-picker color-picker-model="textFour.color" ng-style="{background:var}"/>
+                    <span>Text Size:</span> <input min="20" max="100" ng-model="textFour.size" type="range">
+                   
+                    
+                </div>
+                <p>once you chose the card you like save selection and continue to step 3.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps_sections" ng-show="showcardStepTwo" id="step_section_three">
+        <div class="step_and_line">
+            <h5>STEP 3</h5>
+            <span id="line_in_steps"></span>
+        </div>
+        <div id="step_three_img_paragraph">
+            <img src="{{canvasFrontImg}}" alt="">
+            <div id="pandb">
+                <h4>business cards</h4>
+                <p>
+                    Personalized cards with a professional look. Our traditional card stock available in glossy or matte. choose from hundreds of designs or upload your own.
+                </p>
+            </div>
+        </div>
+        <div id="selections_cards">
+            <div>
+                <span>Finish:</span>
+                <select name="finish" id=""ng-model="finishCard">
+                    <option value="matte">matte</option>
+                    <option value="glossy">glossy</option>
+                </select>
+            </div>
+            <div>
+                <span>Quantity:</span>
+                <select name="quantity" id="" ng-model="quantityCard">
+                    <option ng-repeat="option in StoreInfo[0].businessCardPrices" value="{{option.qty}}">{{option.qty}}---{{option.price}}</option>
+                </select>
+            </div>
+            <div>
+                <span>Text Updates</span>
+                <select name="text updates" id=""ng-model="phoneUpdates">
+                    <option value="true">I want to recive order updates through text</option>
+                    <option value="false">No thanks</option>
+                </select>
+            </div>
+            <button ng-click="addToCart()">Add To Cart</button>
+        </div>
+    </section>
+    <section class="steps_sections" ng-show="showBannerStepTwo" id="step_section_three">
+        <div class="step_and_line">
+            <h5>STEP 3</h5>
+            <span id="line_in_steps"></span>
+        </div>
+        <div id="step_three_img_paragraph">
+            <img src="{{canvasBanner}}" alt="">
+            <div id="pandb">
+                <h4>Banners</h4>
+                <p>
+                    Personalized cards with a professional look. Our traditional card stock available in glossy or matte. choose from hundreds of designs or upload your own.
+                </p>
+            </div>
+        </div>
+        <div id="selections_cards">
+            <div>
+                <span>Quantity:</span>
+                <select name="quantity" id="" ng-model="quantityBanner">
+                    <option ng-repeat="option in StoreInfo[0].businessCardPrices" value="{{option.qty}} {{option.price}}">{{option.qty}}- ${{option.price}}</option>
+                </select>
+            </div>
+            <div>
+                <span>Text Updates</span>
+                <select name="text updates" id=""ng-model="phoneUpdates">
+                    <option value="true">I want to recive order updates through text</option>
+                    <option value="false">No thanks</option>
+                </select>
+            </div>
+            <button ng-click="addToCartBanner()">Add To Cart</button>
+        </div>
+    </section>
+</div>

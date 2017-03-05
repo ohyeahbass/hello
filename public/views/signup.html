@@ -1,0 +1,15 @@
+<h1>Register</h1>
+
+<p>
+	Email:<input ng-model="user.username"/></br>
+	Password:<input ng-model="user.password" type="password" /></br>
+	ReEnter Password:<input ng-model="user.password2" type="password" /></br>
+	First Name:<input ng-model="user.firstName"type="text"><br>
+	Last Name:<input ng-model="user.lastName"type="text"><br>
+	Phone Number:<input ng-model="user.phoneNumber"type="number"><br>
+	<button ng-click="signup(user)">Sign Up</button>
+</p>
+
+<p>Sign Up or Register with:</p>
+
+<a href="/auth/facebook?returnTo={{'/profile'}}" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
